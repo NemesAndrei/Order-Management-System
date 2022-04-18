@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.Presentation.ClientController">
+    <children>
+        <Button fx:id="viewClients" layoutX="32.0" layoutY="67.0" mnemonicParsing="false" onAction="#listAllClients" text="View Clients" />
+        <Button fx:id="addClient" layoutX="32.0" layoutY="99.0" mnemonicParsing="false" onAction="#insertClient" prefHeight="25.0" prefWidth="81.0" text="Add Client" />
+        <Button fx:id="editClient" layoutX="32.0" layoutY="133.0" mnemonicParsing="false" onAction="#updateClient" prefHeight="25.0" prefWidth="81.0" text="Edit Client" />
+        <Button fx:id="deleteClient" layoutX="31.0" layoutY="165.0" mnemonicParsing="false" onAction="#deleteClient" text="Delete Client" />
+        <Label layoutX="32.0" layoutY="38.0" prefHeight="17.0" prefWidth="81.0" text="Clients Menu" />
+        <TableView fx:id="ClientsTable" layoutX="122.0" layoutY="3.0" onSort="#showClientsTable" prefHeight="393.0" prefWidth="472.0" visible="false" />
+        <Label fx:id="clientInsertLabel" alignment="TOP_CENTER" layoutX="223.0" layoutY="38.0" prefHeight="17.0" prefWidth="270.0" text="Client Insert" visible="false" />
+        <Label fx:id="clientNameLabel" layoutX="234.0" layoutY="84.0" text="Name" visible="false" />
+        <Label fx:id="clientEmailLabel" layoutX="236.0" layoutY="116.0" text="Email" visible="false" />
+        <Label fx:id="clientAgeLabel" layoutX="236.0" layoutY="146.0" text="Age" visible="false" />
+        <TextField fx:id="clientNameText" layoutX="284.0" layoutY="80.0" onAction="#insertClient" promptText="Insert Client Name" visible="false" />
+        <TextField fx:id="clientEmailText" layoutX="284.0" layoutY="112.0" onAction="#insertClient" promptText="Insert Client Email" visible="false" />
+        <TextField fx:id="clientAgeText" layoutX="284.0" layoutY="142.0" onAction="#insertClient" promptText="Insert Client Age" visible="false" />
+        <Button fx:id="insertClientButton" layoutX="260.0" layoutY="178.0" mnemonicParsing="false" onAction="#insertClientDB" prefHeight="25.0" prefWidth="198.0" text="Insert Client" visible="false" />
+        <ComboBox fx:id="updateClientCombo" layoutX="306.0" layoutY="47.0" onAction="#chooseClient" prefHeight="25.0" prefWidth="150.0" visible="false" />
+        <Button fx:id="ChooseClientUpdateB" layoutX="480.0" layoutY="47.0" mnemonicParsing="false" onAction="#chooseClient1" text="Choose Client" visible="false" />
+        <Label fx:id="clientNameUpdate" layoutX="233.0" layoutY="108.0" text="Name" visible="false" />
+        <Label fx:id="clientEmailUpdate" layoutX="233.0" layoutY="146.0" text="Email" visible="false" />
+        <Label fx:id="clientAgeUpdate" layoutX="233.0" layoutY="182.0" text="Age" visible="false" />
+        <TextField fx:id="clientNameUpdateT" layoutX="285.0" layoutY="104.0" onAction="#updateClient1" visible="false" />
+        <TextField fx:id="clientEmailUpdateT" layoutX="285.0" layoutY="142.0" onAction="#updateClient1" visible="false" />
+        <TextField fx:id="clientAgeUpdateT" layoutX="285.0" layoutY="178.0" onAction="#updateClient1" visible="false" />
+        <Button fx:id="updateClientB" layoutX="285.0" layoutY="221.0" mnemonicParsing="false" onAction="#updateClient1" prefHeight="25.0" prefWidth="141.0" text="Update Client" visible="false" />
+        <ComboBox fx:id="deleteClientCombo" layoutX="306.0" layoutY="47.0" onAction="#deleteClient2" prefWidth="150.0" visible="false" />
+        <Button fx:id="deleteClientB" layoutX="480.0" layoutY="47.0" mnemonicParsing="false" onAction="#deleteClient1" prefHeight="25.0" prefWidth="108.0" text="Delete Selected" visible="false" />
+        <Label fx:id="updateClientLabel" layoutX="223.0" layoutY="51.0" text="Choose Client" visible="false" />
+    </children>
+</AnchorPane>
